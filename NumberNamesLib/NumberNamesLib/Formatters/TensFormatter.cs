@@ -1,3 +1,5 @@
+using NumberNamesLib.Exceptions;
+
 namespace NumberNamesLib.Formatters {
     public class TensFormatter : IFormat {
         private readonly UnitFormatter _unitFormatter;
@@ -8,8 +10,8 @@ namespace NumberNamesLib.Formatters {
         }
 
         public string Format(int input) {
-            // assuming our input here is 3 digits
-            // TODO: add in exceptions with tests for this
+            if (input >= 1000)
+                throw new InvalidDigitsException(3, input);
 
             var format = "";
             if ((input%100) >= 10)

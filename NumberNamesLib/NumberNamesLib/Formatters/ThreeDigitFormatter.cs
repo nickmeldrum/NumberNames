@@ -1,24 +1,22 @@
-﻿namespace NumberNamesLib.Formatters {
+﻿using NumberNamesLib.Exceptions;
+
+namespace NumberNamesLib.Formatters {
     public class ThreeDigitFormatter : IFormat {
-        private readonly UnitFormatter _unitFormatter;
         private readonly TensFormatter _tensFormatter;
         private readonly HundredsFormatter _hundredsFormatter;
 
-        public ThreeDigitFormatter(UnitFormatter unitFormatter, TensFormatter tensFormatter, HundredsFormatter hundredsFormatter)
+        public ThreeDigitFormatter(TensFormatter tensFormatter, HundredsFormatter hundredsFormatter)
         {
-            _unitFormatter = unitFormatter;
             _tensFormatter = tensFormatter;
             _hundredsFormatter = hundredsFormatter;
         }
 
         public string Format(int input)
         {
-            // assuming our input here is 3 digits
-            // TODO: add in exceptions with tests for this
+            if (input >= 1000)
+                throw new InvalidDigitsException(3, input);
 
-            return _hundredsFormatter.Format(input) +
-                _tensFormatter.Format(input)
-                ;
+            return _hundredsFormatter.Format(input) + _tensFormatter.Format(input);
         }
     }
 }
