@@ -7,6 +7,9 @@ namespace NumberNamesTest {
         [Test]
         [TestCase(0, "zero")]
         [TestCase(1, "one")]
+        [TestCase(2, "two")]
+        [TestCase(7, "seven")]
+        [TestCase(9, "nine")]
         public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {
             // arrange
