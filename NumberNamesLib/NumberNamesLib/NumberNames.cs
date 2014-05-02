@@ -7,7 +7,7 @@ namespace NumberNamesLib
             if (input == 0)
                 return FormatZero(input);
 
-            return (FormatTens((input % 100) / 10) + " " + FormatUnits(input % 10)).Trim();
+            return ((FormatHundreds(input / 100)) + " and " + FormatTens((input % 100) / 10) + " " + FormatUnits(input % 10)).Trim();
         }
 
         private string FormatZero(int input) {
@@ -23,5 +23,12 @@ namespace NumberNamesLib
             return (new[] { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eightty", "ninety" })[input];
         }
 
+        private string FormatHundreds(int input)
+        {
+            if (input == 0)
+                return "";
+
+            return FormatUnits(input) + " hundred";
+        }
     }
 }
