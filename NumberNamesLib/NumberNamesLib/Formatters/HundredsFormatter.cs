@@ -8,10 +8,19 @@ namespace NumberNamesLib.Formatters {
         }
 
         public string Format(int input) {
-            if (input == 0)
-                return "";
+            // assuming our input here is 3 digits
+            // TODO: add in exceptions with tests for this
 
-            return _unitFormatter.Format(input) + " hundred";
+            var format = "";
+            if (input >= 100) {
+                format = (_unitFormatter.Format(input / 100));
+                if (input % 100 == 0)
+                    format += " hundred";
+                else
+                    format += " hundred and ";
+            }
+
+            return format;
         }
     }
 }

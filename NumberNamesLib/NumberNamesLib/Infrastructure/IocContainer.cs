@@ -8,6 +8,7 @@ namespace NumberNamesLib.Infrastructure {
         static IocContainer() {
             var builder = new ContainerBuilder();
 
+            builder.RegisterType<ThreeDigitFormatter>();
             builder.RegisterType<ZeroFormatter>();
             builder.RegisterType<UnitFormatter>();
             builder.RegisterType<TensFormatter>();

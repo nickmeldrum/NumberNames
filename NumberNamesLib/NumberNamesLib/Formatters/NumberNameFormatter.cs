@@ -3,16 +3,12 @@ namespace NumberNamesLib.Formatters
     public class NumberNameFormatter
     {
         private readonly ZeroFormatter _zeroFormatter;
-        private readonly UnitFormatter _unitFormatter;
-        private readonly TensFormatter _tensFormatter;
-        private readonly HundredsFormatter _hundredsFormatter;
+        private readonly ThreeDigitFormatter _threeDigitFormatter;
 
-        public NumberNameFormatter(ZeroFormatter zeroFormatter, UnitFormatter unitFormatter, TensFormatter tensFormatter, HundredsFormatter hundredsFormatter)
+        public NumberNameFormatter(ZeroFormatter zeroFormatter, ThreeDigitFormatter threeDigitFormatter)
         {
             _zeroFormatter = zeroFormatter;
-            _unitFormatter = unitFormatter;
-            _tensFormatter = tensFormatter;
-            _hundredsFormatter = hundredsFormatter;
+            _threeDigitFormatter = threeDigitFormatter;
         }
 
         public string Format(int input)
@@ -20,9 +16,7 @@ namespace NumberNamesLib.Formatters
             if (input == 0)
                 return _zeroFormatter.Format(input);
 
-            return ((_hundredsFormatter.Format(input / 100)) + " and " +
-                _tensFormatter.Format((input % 100) / 10) + " " +
-                _unitFormatter.Format(input % 10)).Trim();
+            return _threeDigitFormatter.Format(input);
         }
     }
 }

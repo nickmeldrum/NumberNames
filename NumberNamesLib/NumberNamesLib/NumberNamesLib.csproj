@@ -47,6 +47,7 @@
     <Compile Include="Formatters\HundredsFormatter.cs" />
     <Compile Include="Formatters\NumberNameFormatter.cs" />
     <Compile Include="Formatters\TensFormatter.cs" />
+    <Compile Include="Formatters\ThreeDigitFormatter.cs" />
     <Compile Include="Formatters\UnitFormatter.cs" />
     <Compile Include="Formatters\ZeroFormatter.cs" />
     <Compile Include="Infrastructure\IocContainer.cs" />
