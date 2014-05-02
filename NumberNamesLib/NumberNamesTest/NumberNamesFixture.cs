@@ -5,12 +5,8 @@ namespace NumberNamesTest {
     [TestFixture]
     public class NumberNamesFixture {
         [Test]
-        public void NumberNames_When_0IsEntered_Then_ZeroIsReturned()
-        {
-            TestNumber(0, "zero");
-        }
-
-        private void TestNumber(int input, string expectedOutput)
+        [TestCase(0, "zero")]
+        public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {
             // arrange
             var numberNames = new NumberNames();
