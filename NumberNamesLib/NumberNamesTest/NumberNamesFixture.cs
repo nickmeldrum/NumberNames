@@ -10,6 +10,7 @@ namespace NumberNamesTest {
         [TestCase(2, "two")]
         [TestCase(7, "seven")]
         [TestCase(9, "nine")]
+        [TestCase(10, "ten")]
         public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {
             // arrange
