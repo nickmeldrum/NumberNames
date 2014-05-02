@@ -7,3 +7,5 @@ C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\n
 C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\obj\Debug\NumberNamesTest.csprojResolveAssemblyReference.cache
 C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\obj\Debug\NumberNamesTest.dll
 C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\obj\Debug\NumberNamesTest.pdb
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\Autofac.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\Autofac.xml

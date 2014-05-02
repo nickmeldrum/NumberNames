@@ -1,5 +1,8 @@
-﻿using NUnit.Framework;
+﻿using Autofac;
+using NUnit.Framework;
 using NumberNamesLib;
+using NumberNamesLib.Formatters;
+using NumberNamesLib.Infrastructure;
 
 namespace NumberNamesTest {
     [TestFixture]
@@ -27,7 +30,7 @@ namespace NumberNamesTest {
         public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {
             // arrange
-            var numberNames = new NumberNames();
+            var numberNames = IocContainer.Container.Resolve<NumberNameFormatter>();
 
             // act
             var result = numberNames.Format(input);
