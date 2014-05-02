@@ -6,6 +6,7 @@ namespace NumberNamesTest {
     public class NumberNamesFixture {
         [Test]
         [TestCase(0, "zero")]
+        [TestCase(1, "one")]
         public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {
             // arrange
