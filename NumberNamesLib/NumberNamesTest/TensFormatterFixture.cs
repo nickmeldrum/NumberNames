@@ -44,6 +44,18 @@ namespace NumberNamesTest {
         }
 
         [Test]
+        public void TensFormatter_When_DigitsIsInTeens_Then_TheSpecialCaseTeensWordIsReturned() {
+            // arrange
+            var formatter = IocContainer.Container.Resolve<TensFormatter>();
+
+            // act
+            var value = formatter.Format(16);
+
+            // assert
+            Assert.That(value, Is.EqualTo("sixteen"));
+        }
+
+        [Test]
         public void TensFormatter_When_InputIs3Digits_Then_ResultIsNoException() {
             // arrange
             var formatter = IocContainer.Container.Resolve<TensFormatter>();
