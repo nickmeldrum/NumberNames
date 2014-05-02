@@ -1,0 +1,5 @@
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesLib\bin\Debug\NumberNamesLib.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesLib\bin\Debug\NumberNamesLib.pdb
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesLib\obj\Debug\NumberNamesLib.csprojResolveAssemblyReference.cache
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesLib\obj\Debug\NumberNamesLib.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesLib\obj\Debug\NumberNamesLib.pdb

@@ -1,0 +1,9 @@
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\NumberNamesTest.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\NumberNamesTest.pdb
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\NumberNamesLib.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\nunit.framework.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\NumberNamesLib.pdb
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\bin\Debug\nunit.framework.xml
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\obj\Debug\NumberNamesTest.csprojResolveAssemblyReference.cache
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\obj\Debug\NumberNamesTest.dll
+C:\Users\Nick\src\current\NumberNames\NumberNamesLib\NumberNamesTest\obj\Debug\NumberNamesTest.pdb
