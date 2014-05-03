@@ -13,10 +13,13 @@ namespace NumberNamesLib.Formatters {
             if (input >= 1000)
                 throw new InvalidDigitsException(3, input);
 
+            if (input % 100 > 10 && input % 100 < 19)
+                    return (new[] { "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen" })[input % 100 - 11];
+
             var format = "";
             if ((input%100) >= 10)
             {
-                format = (new[] { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eightty", "ninety" })[input % 100 / 10];
+                    format = (new[] { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eightty", "ninety" })[input % 100 / 10];
                 if ((input%100)%10 != 0)
                     format += " ";
             }
