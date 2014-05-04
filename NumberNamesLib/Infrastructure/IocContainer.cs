@@ -14,6 +14,7 @@ namespace NumberNamesLib.Infrastructure {
             builder.RegisterType<TensFormatter>();
             builder.RegisterType<HundredsFormatter>();
             builder.RegisterType<NumberNameFormatter>();
+            builder.RegisterType<RecombinationFormatter>();
             Container = builder.Build();
         }
     }

@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HundredsFormatterFixture.cs" />
+    <Compile Include="RecombinationFormatterFixture.cs" />
     <Compile Include="ZeroFormatterFixture.cs" />
     <Compile Include="TensFormatterFixture.cs" />
     <Compile Include="NumberNamesFixture.cs" />

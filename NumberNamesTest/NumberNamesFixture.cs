@@ -1,8 +1,7 @@
 ﻿using Autofac;
-using NUnit.Framework;
-using NumberNamesLib;
 using NumberNamesLib.Formatters;
 using NumberNamesLib.Infrastructure;
+using NUnit.Framework;
 
 namespace NumberNamesTest {
     [TestFixture]

@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="Exceptions\InvalidDigitsException.cs" />
     <Compile Include="Exceptions\NumberNotZeroException.cs" />
+    <Compile Include="Formatters\RecombinationFormatter.cs" />
     <Compile Include="Formatters\HundredsFormatter.cs" />
     <Compile Include="Formatters\NumberNameFormatter.cs" />
     <Compile Include="Formatters\TensFormatter.cs" />
