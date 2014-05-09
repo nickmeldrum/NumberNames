@@ -25,6 +25,10 @@ namespace NumberNamesTest {
         [TestCase(500, "five hundred")]
         [TestCase(911, "nine hundred and eleven")]
         [TestCase(999, "nine hundred and ninety nine")]
+        [TestCase(1000, "one thousand")]
+        [TestCase(1001, "one thousand and one")]
+        [TestCase(1002, "one thousand and two")]
+        [TestCase(1632, "one thousand and six hundred and thirty two")]
         //[TestCase(, "")]
         public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {

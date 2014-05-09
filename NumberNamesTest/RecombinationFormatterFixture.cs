@@ -7,6 +7,18 @@ namespace NumberNamesTest {
     [TestFixture]
     public class RecombinationFormatterFixture {
         [Test]
+        public void RecombinationFormatter_When_FormattingExactlyOneThousand_Then_ResultDoesNotHaveExtraSpacesOrAnds() {
+            // arrange
+            var recombinationFormatter = IocContainer.Container.Resolve<RecombinationFormatter>();
+
+            // act
+            var result = recombinationFormatter.Format(1000);
+
+            // assert
+            Assert.That(result, Is.EqualTo("one thousand"));
+        }
+
+        [Test]
         public void RecombinationFormatter_When_FormattingANumberWith2ThreeDigitGroups_Then_ResultHas23DigitGroupRepresentationsSeparatedByAnd() {
             // arrange
             var recombinationFormatter = IocContainer.Container.Resolve<RecombinationFormatter>();
