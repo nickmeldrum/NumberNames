@@ -17,7 +17,7 @@ namespace NumberNamesLib.Formatters {
             for (var i = 0; i < threeDigitGroups.Length; i++)
             {
                 var threeDigitStringRepresentation = CreateThreeDigitStringRepresentation(threeDigitGroups, i);
-                output += threeDigitStringRepresentation + (i == threeDigitGroups.Length - 1 ? " and " : "");
+                output += (i > 0 ? " and " : "") + threeDigitStringRepresentation;
             }
             return output;
         }

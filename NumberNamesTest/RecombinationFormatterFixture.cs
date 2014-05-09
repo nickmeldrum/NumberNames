@@ -7,7 +7,7 @@ namespace NumberNamesTest {
     [TestFixture]
     public class RecombinationFormatterFixture {
         [Test]
-        public void RecombinationFormatter_When_FormattingANumberWith2ThreeDigitGroups_Then_ResultHas1st3DigitGroupFollowedByALargeNumberName() {
+        public void RecombinationFormatter_When_FormattingANumberWith2ThreeDigitGroups_Then_ResultHas23DigitGroupRepresentationsSeparatedByAnd() {
             // arrange
             var recombinationFormatter = IocContainer.Container.Resolve<RecombinationFormatter>();
 
@@ -15,7 +15,7 @@ namespace NumberNamesTest {
             var result = recombinationFormatter.Format(1002);
 
             // assert
-            Assert.That(result, Is.StringStarting("one thousand"));
+            Assert.That(result, Is.EqualTo("one thousand and two"));
         }
 
         [Test]
