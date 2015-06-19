@@ -29,6 +29,10 @@ namespace NumberNamesTest {
         [TestCase(1001, "one thousand and one")]
         [TestCase(1002, "one thousand and two")]
         [TestCase(1632, "one thousand and six hundred and thirty two")]
+        [TestCase(1000001, "one million and one")]
+        [TestCase(1000000, "one million")]
+        [TestCase(999999, "nine hundred and ninety nine thousand, nine hundred and ninety nine")]
+        [TestCase(56945781, "fifty six million, nine hundred and forty five thousand, seven hundred and eighty one")]
         //[TestCase(, "")]
         public void NumberNames_When_TestDataIntegerIsEntered_Then_TestDataExpectedOutputIsReturned(int input, string expectedOutput)
         {
