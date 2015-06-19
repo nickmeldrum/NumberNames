@@ -1,9 +1,9 @@
-# NumberNames
+# "Number Names"
 An example of a completion of a pretty typical interview test/ kata for converting integers into the british string equivalent.
 
 Written in C#.
 
- # Code Test
+# Code Test
  
 Take a number and give the equivalent number in British English words e.g.
 
