@@ -15,8 +15,18 @@ namespace NumberNamesLib.Formatters {
 
             var threeDigitGroups = CreateThreeDigitGroupSplit(input);
             for (var i = 0; i < threeDigitGroups.Length; i++)
+            {
                 if (threeDigitGroups[i] != 0)
-                    output += (i > 0 ? " and " : "") + CreateThreeDigitStringRepresentation(threeDigitGroups, i);
+                {
+                    // if at final comma, and last group has no hundreds + more than 1 group 
+                    // then combiner = and otherwise it's a ,
+                    var combiner = ", ";
+                    if (i == 0) combiner = "";
+                    else if (i == threeDigitGroups.Length - 1 && threeDigitGroups[i] / 100 == 0) combiner = " and ";
+
+                    output += combiner + CreateThreeDigitStringRepresentation(threeDigitGroups, i);
+                }
+            }
 
             return output;
         }

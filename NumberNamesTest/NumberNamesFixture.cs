@@ -28,7 +28,7 @@ namespace NumberNamesTest {
         [TestCase(1000, "one thousand")]
         [TestCase(1001, "one thousand and one")]
         [TestCase(1002, "one thousand and two")]
-        [TestCase(1632, "one thousand and six hundred and thirty two")]
+        [TestCase(1632, "one thousand, six hundred and thirty two")]
         [TestCase(1000001, "one million and one")]
         [TestCase(1000000, "one million")]
         [TestCase(999999, "nine hundred and ninety nine thousand, nine hundred and ninety nine")]
