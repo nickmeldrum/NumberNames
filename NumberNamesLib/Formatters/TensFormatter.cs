@@ -19,7 +19,7 @@ namespace NumberNamesLib.Formatters {
             var format = "";
             if ((input%100) >= 10)
             {
-                    format = (new[] { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eightty", "ninety" })[input % 100 / 10];
+                    format = (new[] { "", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety" })[input % 100 / 10];
                 if ((input%100)%10 != 0)
                     format += " ";
             }
