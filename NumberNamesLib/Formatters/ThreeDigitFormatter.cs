@@ -2,13 +2,13 @@
 
 namespace NumberNamesLib.Formatters {
     public class ThreeDigitFormatter : IFormat {
-        private readonly TensFormatter _tensFormatter;
-        private readonly HundredsFormatter _hundredsFormatter;
+        private readonly TensFormatter tensFormatter;
+        private readonly HundredsFormatter hundredsFormatter;
 
         public ThreeDigitFormatter(TensFormatter tensFormatter, HundredsFormatter hundredsFormatter)
         {
-            _tensFormatter = tensFormatter;
-            _hundredsFormatter = hundredsFormatter;
+            this.tensFormatter = tensFormatter;
+            this.hundredsFormatter = hundredsFormatter;
         }
 
         public string Format(int input)
@@ -16,7 +16,7 @@ namespace NumberNamesLib.Formatters {
             if (input >= 1000)
                 throw new InvalidDigitsException(3, input);
 
-            return _hundredsFormatter.Format(input) + _tensFormatter.Format(input);
+            return this.hundredsFormatter.Format(input) + this.tensFormatter.Format(input);
         }
     }
 }

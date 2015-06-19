@@ -2,11 +2,11 @@ using NumberNamesLib.Exceptions;
 
 namespace NumberNamesLib.Formatters {
     public class HundredsFormatter : IFormat {
-        private readonly UnitFormatter _unitFormatter;
+        private readonly UnitFormatter unitFormatter;
 
         public HundredsFormatter(UnitFormatter unitFormatter)
         {
-            _unitFormatter = unitFormatter;
+            this.unitFormatter = unitFormatter;
         }
 
         public string Format(int input) {
@@ -15,7 +15,7 @@ namespace NumberNamesLib.Formatters {
 
             var format = "";
             if (input >= 100) {
-                format = (_unitFormatter.Format(input / 100));
+                format = (this.unitFormatter.Format(input / 100));
                 if (input % 100 == 0)
                     format += " hundred";
                 else

@@ -2,11 +2,11 @@ using System.Globalization;
 
 namespace NumberNamesLib.Formatters {
     public class RecombinationFormatter : IFormat {
-        private readonly ThreeDigitFormatter _threeDigitFormatter;
+        private readonly ThreeDigitFormatter threeDigitFormatter;
 
         public RecombinationFormatter(ThreeDigitFormatter threeDigitFormatter)
         {
-            _threeDigitFormatter = threeDigitFormatter;
+            this.threeDigitFormatter = threeDigitFormatter;
         }
 
         public string Format(int input)
@@ -24,7 +24,7 @@ namespace NumberNamesLib.Formatters {
         {
             var bigNumberNames = new[] { "", " thousand", " million", " billion", " trillion", " quadrillion", " quintillion", " sextillion", " septillion", " octillion", " nonillion", " decillion" };
 
-            return _threeDigitFormatter.Format(threeDigitGroups[position]) + bigNumberNames[threeDigitGroups.Length - position - 1];
+            return this.threeDigitFormatter.Format(threeDigitGroups[position]) + bigNumberNames[threeDigitGroups.Length - position - 1];
         }
 
         public int[] CreateThreeDigitGroupSplit(int input)
