@@ -1,19 +1,24 @@
 using System.Globalization;
 
 namespace NumberNamesLib.Formatters {
+    using System;
+
     public class RecombinationFormatter : IFormat {
         private readonly ThreeDigitFormatter threeDigitFormatter;
 
-        public RecombinationFormatter(ThreeDigitFormatter threeDigitFormatter)
+        private readonly NegativeFormatter negativeFormatter;
+
+        public RecombinationFormatter(ThreeDigitFormatter threeDigitFormatter, NegativeFormatter negativeFormatter)
         {
             this.threeDigitFormatter = threeDigitFormatter;
+            this.negativeFormatter = negativeFormatter;
         }
 
         public string Format(int input)
         {
-            var output = "";
+            var output = negativeFormatter.Format(input);
 
-            var threeDigitGroups = CreateThreeDigitGroupSplit(input);
+            var threeDigitGroups = CreateThreeDigitGroupSplit(Math.Abs(input));
             for (var i = 0; i < threeDigitGroups.Length; i++)
             {
                 if (threeDigitGroups[i] != 0)

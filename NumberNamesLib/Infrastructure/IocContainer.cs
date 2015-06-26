@@ -9,6 +9,7 @@ namespace NumberNamesLib.Infrastructure {
             var builder = new ContainerBuilder();
 
             builder.RegisterType<ThreeDigitFormatter>();
+            builder.RegisterType<NegativeFormatter>();
             builder.RegisterType<ZeroFormatter>();
             builder.RegisterType<UnitFormatter>();
             builder.RegisterType<TensFormatter>();
