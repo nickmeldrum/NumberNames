@@ -1,10 +1,5 @@
 # "Number Names"
-An example of a completion of a pretty typical interview test/ kata for converting integers into the british string equivalent.
 
-Written in C#.
-
-# Code Test
- 
 Take a number and give the equivalent number in British English words e.g.
 
 * 1 = one
@@ -14,24 +9,15 @@ Take a number and give the equivalent number in British English words e.g.
 
 etc. up to 999,999,999.
 
-As a pointer on what we would be looking for in the app:
+As a pointer on what we would be looking for:
 
-* Test Driven Development
-* Application of good OO design principles to solve the problem e.g.
-* clear separation of concerns
-* well defined objects / interfaces
-* application of patterns to solve the problem if possible
-* well tested code
-* well refactored code
-* A procedural approach to this code is strongly discouraged
+* Test driven development
+* Application of good design principles to solve the problem
 
-# Large Number Names
+## Number Names notes
 
-The English names of smaller numbers are generally accepted. However, once a number to be converted reaches a value of one thousand million or greater, the names of numbers vary according to usage. The algorithm described in this article uses the modern short scale numbering. In this scale, one thousand million is equivalent to one billion. This is different to the less-used traditional British long scale numbering where a billion is one million million.
+One thousand million is equivalent to one billion.
 
-The following table lists the short scale number names included in the algorithm and their numeric values. The range of numbers has been selected to provide for the full range of values that may be held in a 32-bit integer. If you wish to extend the functionality of the algorithm to larger numbers, a Wikipedia article exists that lists the names of large numbers.
-
-## Value:	Name
  * 1:	one
  * 10:	ten
  * 100:	hundred
@@ -39,9 +25,9 @@ The following table lists the short scale number names included in the algorithm
  * 1,000,000:	million
  * 1,000,000,000:	billion
 
-## Number Rules
+## The algorithm
 
-The set of rules for converting an integer number to text initially appear to be reasonably complex. however, once analysed, they can be separated into a small number of distinct rule groups that are simpler to implement individually. To provide a single algorithm for all the integer values there are six such rule groups:
+To provide a single algorithm for all the integer values there are six such rule groups:
 
 1. Zero Rule: If the value is zero then the number in words is ‘zero’ and no other rules apply.
 
